@@ -1,10 +1,21 @@
-import { Component } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'mypage-v2';
+export class AppComponent implements OnInit {
+
+	@ViewChild('topmenu') topmenu: ElementRef;
+
+	constructor(
+		private scroller: ViewportScroller,
+	) { }
+
+	ngOnInit(): void {
+
+	}
+
 }
