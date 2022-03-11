@@ -18,6 +18,8 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "@ionic/angular": "^6.0.11",
+    "@ionic/cli": "^6.18.2",
     "@tailwindcss/cli": "^0.1.2",
     "postcss": "^8.4.8",
     "rxjs": "~7.5.0",
