@@ -1,21 +1,20 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 
 @Component({
 	selector: 'app-about',
 	templateUrl: './about.component.html',
 	styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit, AfterViewInit {
+export class AboutComponent implements AfterViewInit {
 
-	constructor(
-	) { }
+	@ViewChild('about') about: ElementRef;
 
-	ngOnInit(): void {
+	@Output() position = new EventEmitter<[number, number]>();
 
-	}
+	constructor() { }
 
 	ngAfterViewInit(): void {
-
+		this.position.emit(this.about.nativeElement.offsetTop);
 	}
 
 }

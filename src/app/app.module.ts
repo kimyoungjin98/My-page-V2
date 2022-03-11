@@ -5,8 +5,8 @@ import { AboutComponent } from './about/about.component';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectComponent } from './project/project.component';
-import { SkillsComponent } from './skills/skills.component';
 import { SkillsModule } from './skills/skills.module';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
 	declarations: [
@@ -18,6 +18,7 @@ import { SkillsModule } from './skills/skills.module';
 	imports: [
 		BrowserModule,
 		IonicModule.forRoot(),
+		ScrollingModule,
 		SkillsModule,
 	],
 	providers: [],

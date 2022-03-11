@@ -1,17 +1,33 @@
 <div class="h-full">
 	<div #topmenu
-		class="flex w-full py-5 justify-end space-x-10 text-2xl text-white font-bold font-Poppins bg-indigo-600">
+		class="flex w-full fixed py-5 justify-end space-x-10 text-2xl text-indigo-400 font-bold font-Poppins bg-white z-20">
 		<div class="px-5 mr-auto">Youngjin's
 			Page?ver=2.0</div>
-		<div class="hover:text-indigo-200 px-5 transition-all cursor-pointer">About</div>
-		<div class="hover:text-indigo-200 px-5 transition-all cursor-pointer">Skills</div>
-		<div class="hover:text-indigo-200 px-5 transition-all cursor-pointer">Project
+		<div class="hover:text-indigo-200 px-5 transition-all cursor-pointer" (click)="handleMenuClick('about')">About
 		</div>
-		<div class="hover:text-indigo-200 px-5 transition-all cursor-pointer">Contact
+		<div class="hover:text-indigo-200 px-5 transition-all cursor-pointer" (click)="handleMenuClick('skills')">Skills
+		</div>
+		<div class="hover:text-indigo-200 px-5 transition-all cursor-pointer" (click)="handleMenuClick('project')">
+			Project
+		</div>
+		<div class="hover:text-indigo-200 px-5 transition-all cursor-pointer" (click)="handleMenuClick('contact')">
+			Contact
 		</div>
 	</div>
-	<app-about></app-about>
-	<app-skills></app-skills>
-	<app-project></app-project>
-	<app-contact></app-contact>
+	<div class="p-10">
+
+	</div>
+	<div class="fixed top-auto right-0 bottom-0 m-5">
+		<ion-icon
+			class="cursor-pointer hover:bg-indigo-500 transition-colors bg-indigo-400 w-5 h-5 rounded-full p-5 text-center text-white"
+			src="\assets\arrow-up-outline.svg" (click)="handleMenuClick('about')">
+		</ion-icon>
+	</div>
+	<app-about (position)="getAboutPosition($event)"></app-about>
+	<app-skills (position)="getSkillsPosition($event)"></app-skills>
+	<app-project (position)="getProjectPosition($event)"></app-project>
+	<app-contact (position)="getContactPosition($event)"></app-contact>
+	<div class="flex p-5 bg-gray-900 text-white justify-center">
+		<div class="font-Poppins">&copy; youngjin kim's All rights reserved.</div>
+	</div>
 </div>

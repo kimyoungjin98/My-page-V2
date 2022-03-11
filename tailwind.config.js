@@ -6,6 +6,7 @@ module.exports = {
 			'Jua': ['Jua'],
 			'Gamja-Flower': ['Gamja Flower'],
 			'Dongle': ['Dongle'],
+			'Noto-Sans': ['Noto Sans KR']
 		},
 		extend: {
 			spacing: {
